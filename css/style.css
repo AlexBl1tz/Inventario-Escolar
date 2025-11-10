@@ -1,0 +1,90 @@
+/* === FONDO DIFUMINADO === */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: url('../img/escue.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Capa de desenfoque */
+body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: 0;
+}
+
+/* === CUADRO DEL LOGIN === */
+.login-container {
+    position: relative;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.75);
+    padding: 40px 50px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.7);
+    text-align: center;
+    width: 250px;
+    color: white;
+}
+
+.login-container h2 {
+    margin-bottom: 25px;
+    font-size: 26px;
+    color: #fff;
+}
+
+.login-container input {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    font-size: 15px;
+    outline: none;
+}
+
+.login-container input::placeholder {
+    color: #ccc;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background: #00b894;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.login-container button:hover {
+    background: #019870;
+}
+
+.error {
+    color: #ff7675;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 13px;
+    opacity: 0.6;
+}

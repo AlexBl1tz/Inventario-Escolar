@@ -1,0 +1,159 @@
+/* ===== INVENTARIO GENERAL ===== */
+
+
+.header {
+    background-color: #5563DE;
+    color: white;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+/* Contenedor de botones */
+.btns-container {
+    display: flex;
+    justify-content: center;   /* Centra los botones horizontalmente */
+    align-items: center;
+    gap: 20px;                 /* Espacio entre botones */
+    margin: 20px 0;
+}
+
+/* Estilo moderno de los botones */
+.buton39 {
+    background: linear-gradient(135deg, #c54edf, #972ed9);
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto brillante */
+.buton39::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0)
+    );
+    transition: all 0.6s ease;
+}
+
+/* Hover */
+.buton39:hover::before {
+    left: 100%;
+}
+
+.buton39:hover {
+    background: linear-gradient(135deg, #2e59d9, #1e40af);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    transform: translateY(-3px);
+}
+
+/* Click */
+.buton39:active {
+    transform: translateY(2px);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
+
+
+
+.mover2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #f0f0f0;
+    background: rgba(52, 73, 94, 0.8); /* un fondo gris azulado semitransparente */
+    padding: 8px 16px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-left: 50px; /* mueve un poco hacia la izquierda */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.mover2 strong {
+    color: #FFD700; /* da color dorado al nombre del usuario */
+}
+
+.mover2:hover {
+    background: rgba(41, 128, 185, 0.9); /* cambia a azul al pasar el cursor */
+    transform: translateX(-5px); /* efecto sutil de movimiento hacia la izquierda */
+}
+
+
+.logout-btn {
+    color: white;
+    text-decoration: none;
+    background: #E74C3C;
+    padding: 8px 12px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-left: 400px; /* Mueve el botón hacia la izquierda */
+    float: left; /* Lo coloca al lado izquierdo del header */
+}
+
+.logout-btn:hover {
+    background: #C0392B;
+}
+
+.formulario {
+    background: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.formulario input, 
+.formulario select, 
+.formulario button {
+    margin: 5px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.formulario button {
+    background-color: #5563DE;
+    color: white;
+    border: none;
+}
+
+table {
+    width: 95%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table th, table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+table th {
+    background-color: #5563DE;
+    color: white;
+}
+
