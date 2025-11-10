@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario Escolar</title>
+
+    <!-- Fuente moderna desde Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f3f4f6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #0056b3;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 22px;
+            letter-spacing: 1px;
+        }
+
+        .contenedor {
+            max-width: 900px;
+            margin: 40px auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 30px;
+        }
+
+        .botones {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            margin: 10px;
+            border-radius: 8px;
+            font-size: 15px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #0056b3;
+            transform: scale(1.05);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background: #007bff;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background: #f2f2f2;
+        }
+
+        tr:hover {
+            background: #dce8ff;
+        }
+
+        .estado-guardado {
+            color: green;
+            font-weight: 600;
+        }
+
+        .estado-prestado {
+            color: orange;
+            font-weight: 600;
+        }
+
+        .estado-danado {
+            color: red;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <header>📚 Inventario Escolar</header>
+
+    <div class="contenedor">
+        <div class="botones">
+            <button onclick="window.location.href='agregar_libro.php'">➕ Agregar Libro</button>
+            <button onclick="window.location.href='prestamo.php'">📖 Registrar Préstamo</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Título</th>
+                    <th>Autor</th>
+                    <th>Editorial</th>
+                    <th>Año</th>
+                    <th>Cantidad</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Ejemplo de filas, si usas PHP, esto se genera dinámicamente -->
+                <tr>
+                    <td>1</td>
+                    <td>Matemáticas 1</td>
+                    <td>Juan Pérez</td>
+                    <td>Santillana</td>
+                    <td>2021</td>
+                    <td>10</td>
+                    <td class="estado-guardado">Guardado</td>
+                    <td>
+                        <button onclick="window.location.href='editar_libro.php?id=1'">✏️ Editar</button>
+                        <button onclick="window.location.href='eliminar_libro.php?id=1'">🗑️ Eliminar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Ciencias 2</td>
+                    <td>Laura Gómez</td>
+                    <td>Trillas</td>
+                    <td>2022</td>
+                    <td>8</td>
+                    <td class="estado-prestado">Prestado</td>
+                    <td>
+                        <button onclick="window.location.href='editar_libro.php?id=2'">✏️ Editar</button>
+                        <button onclick="window.location.href='eliminar_libro.php?id=2'">🗑️ Eliminar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
